@@ -173,7 +173,7 @@ const checkBox = (req, res) => {
 
 const deleteCompletedTodos = (req, res) => {
   try {
-    const {isDone} = req.params
+    const {isDone} = req.body
     const todos = read_file('product.json');
     
     const userTodos = todos.filter(todo => todo.added_by === req.user.id);

@@ -16,6 +16,10 @@ app.use(productRouter)
 app.use(authRouter)
 app.use(superadminRouter)
 
+app.use("/", (req, res) => {
+  res.status(200).json({message: "ishladi"})
+})
+
 app.listen(PORT, () => {
   console.log(PORT);
 })
